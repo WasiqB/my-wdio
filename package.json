@@ -4,7 +4,9 @@
   "description": "My first wdio project.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio wdio.conf.js"
+    "report:generate": "./node_modules/allure-commandline/bin/allure generate --clean ./allure-results -o ./allure-report",
+    "report:open": "./node_modules/allure-commandline/bin/allure open ./allure-report",
+    "test": "./node_modules/.bin/wdio ./conf/wdio.web.conf.js"
   },
   "repository": {
     "type": "git",

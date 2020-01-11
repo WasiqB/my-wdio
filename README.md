@@ -22,3 +22,15 @@ $ npm install
 ```bash
 $ npm test
 ```
+
+# Generate Allure Report
+
+```bash
+$ npm run report:generate
+```
+
+# Open Allure Report
+
+```bash
+$ npm run report:open
+```

@@ -1,0 +1,19 @@
+{
+  "name": "my-wdio",
+  "version": "1.0.0",
+  "description": "My first wdio project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WasiqB/my-wdio.git"
+  },
+  "author": "Wasiq Bhamla",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/WasiqB/my-wdio/issues"
+  },
+  "homepage": "https://github.com/WasiqB/my-wdio#readme"
+}

@@ -1,6 +1,6 @@
 exports.config = {
     runner: 'local',
-    path: '/',
+    path: '/wd/hub',
     maxInstances: 1,
     capabilities: [{
         maxInstances: 5,
@@ -13,12 +13,12 @@ exports.config = {
     connectionRetryCount: 3,
     services: [
         'chromedriver',
-        // 'selenium-standalone'
+        'selenium-standalone'
     ],
     framework: 'mocha',
     reporters: [['allure', {outputDir: 'allure-results'}]],
     mochaOpts: {
-        ui: 'bdd',
+        ui: 'tdd',
         compilers: ['js:@babel/register'],
         timeout: 60000
     },

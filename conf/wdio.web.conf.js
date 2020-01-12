@@ -1,7 +1,7 @@
 const { config } = require('./wdio.conf');
 
 config.specs = [
-  './test/specs/**/*.js'
+  './test/web/**/*.spec.js'
 ];
 
 exports.config = config;

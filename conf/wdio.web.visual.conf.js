@@ -9,11 +9,12 @@ config.services = [
   [
     'image-comparison',
     {
-      baselineFolder: join(process.cwd(), './localBaseline/'),
-      debug: true,
+      baselineFolder: join(process.cwd(), './snapshots/baselines'),
+      returnAllCompareData: true,
+      // debug: true,
       formatImageName: '{tag}-{logName}-{width}x{height}',
-      screenshotPath: join(process.cwd(), '.tmp/'),
-      savePerInstance: true,
+      screenshotPath: join(process.cwd(), 'snapshots/'),
+      savePerInstance: false,
       blockOutStatusBar: true,
       autoSaveBaseline: true,
       blockOutToolBar: true,

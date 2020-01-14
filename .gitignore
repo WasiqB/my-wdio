@@ -3,3 +3,5 @@ node_modules
 allure-results
 allure-report
 snapshots
+logs
+**/.DS_Store

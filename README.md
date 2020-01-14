@@ -31,14 +31,8 @@ $ npm test
 $ npm run test:visual
 ```
 
-# Generate Allure Report
+# Generate and Open Allure Report
 
 ```bash
-$ npm run report:generate
-```
-
-# Open Allure Report
-
-```bash
-$ npm run report:open
+$ npm run report
 ```

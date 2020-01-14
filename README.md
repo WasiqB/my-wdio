@@ -19,13 +19,27 @@ My first try on webdriverio.
 $ npm install
 ```
 
-# Run Tests
+# Run Tests on desktop chrome
 
 ```bash
 $ npm test
 ```
 
-# Run Visual Tests with `wdio-image-comparision-service`
+# Visual Tests with `wdio-image-comparision-service`
+
+## Run Tests on Android chrome
+
+```bash
+$ npm run test:android
+```
+
+## Run Tests on iPhone Safari
+
+```bash
+$ npm run test:ios
+```
+
+## Run Tests on Desktop Chrome
 
 ```bash
 $ npm run test:visual

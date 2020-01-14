@@ -8,10 +8,7 @@ browser.setTimeout({ 'implicit': 60000 })
 suite('Visual regression tests on the home page on Android.', () => {
   setup(() => {
     loginPage.open();
-    loginPage.login({
-      login: 'abc@xyz.com',
-      password: 'abcd'
-    })
+    loginPage.buttonLogin.waitForExist();
   });
 
   test('Displays logo on the home page.', () => {

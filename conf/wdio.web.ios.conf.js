@@ -33,20 +33,10 @@ config.appium = {
 };
 config.capabilities = [
   {
-    browserName: 'Safari',
-    automationName: 'XCUITest',
+    browserName: 'safari',
     platformName: 'iOS',
     platformVersion: '13.3',
     deviceName: 'iPhone 8 Plus',
-    fullReset: false,
-    noReset: true,
-    usePrebuiltWDA: true,
-    // 'safari:useSimulator': true,
-    includeSafariInWebviews: true,
-    waitforTimeout: 30 * 60000,
-    safariInitialUrl: config.baseUrl,
-    commandTimeout: 30 * 60000,
-    newCommandTimeout: 30 * 60000,
   },
 ];
 

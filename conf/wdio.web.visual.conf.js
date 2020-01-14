@@ -7,6 +7,7 @@ config.specs = [
 
 // https://github.com/wswebcreation/webdriver-image-comparison/blob/master/docs/OPTIONS.md#compare-options
 config.services = [
+  'selenium-standalone',
   [
     'image-comparison',
     {

@@ -1,7 +1,5 @@
-// import { path } from 'path';
 import { expect } from 'chai';
 import { loginPage } from '../../../pages/login'
-// import { homePage } from '../../../pages/home'
 
 function getRegion(selector) {
   const element = $(selector);
@@ -18,20 +16,19 @@ function getRegion(selector) {
 suite('Visual regression tests on the home page.', () => {
   setup(() => {
     loginPage.open();
+    loginPage.buttonLogin.waitForExist();
   });
 
   test('Displays logo on the home page.', () => {
+    var blockOutRegion = [];
+    if (!browser.isMobile) {
+      blockOutRegion.push(getRegion('div#homepage-slider'));
+    }
     const testOptions = {
-      blockOut: [
-        getRegion('div#homepage-slider')
-      ],
+      blockOut: blockOutRegion,
     };
     const results = browser.checkFullPageScreen('fullPageCheckFolders', testOptions);
     console.log(results);
     expect(results.misMatchPercentage).to.lessThan(5);
   });
-
-//   test('Displays empty cart on the home page.', () => {
-//     expect(browser.checkElement(homePage.cart, this.test.title)).to.equal(0);
-//   });
 });

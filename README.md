@@ -11,6 +11,7 @@ My first try on webdriverio.
 - `allure-commandline`
 - `webdriverio`
 - `wdio-image-comparison-service`
+- `wdio-native-app-compare-service`
 - `fs-extra`
 
 # Install Packages
@@ -19,7 +20,7 @@ My first try on webdriverio.
 $ npm install
 ```
 
-# Run Tests on desktop chrome
+# Run Functional Tests on desktop chrome
 
 ```bash
 $ npm test
@@ -30,19 +31,19 @@ $ npm test
 ## Run Tests on Android chrome
 
 ```bash
-$ npm run test:android
+$ npm run web:android
 ```
 
 ## Run Tests on iPhone Safari
 
 ```bash
-$ npm run test:ios
+$ npm run web:ios
 ```
 
 ## Run Tests on Desktop Chrome
 
 ```bash
-$ npm run test:visual
+$ npm run web:chrome
 ```
 
 # Generate and Open Allure Report

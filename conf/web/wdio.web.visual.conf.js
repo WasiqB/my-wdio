@@ -1,5 +1,5 @@
 const { join } = require('path');
-const { config } = require('./wdio.conf');
+const { config } = require('../wdio.conf');
 
 config.specs = [
   './test/web/visual/*.spec.js'
@@ -13,7 +13,6 @@ config.services = [
     {
       baselineFolder: join(process.cwd(), './snapshots/baselines'),
       returnAllCompareData: true,
-      // debug: true,
       formatImageName: '{tag}-{logName}-{width}x{height}',
       screenshotPath: join(process.cwd(), 'snapshots/'),
       savePerInstance: false,

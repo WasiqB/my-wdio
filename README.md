@@ -13,6 +13,7 @@ My first try on webdriverio.
 - `wdio-image-comparison-service`
 - `wdio-native-app-compare-service`
 - `fs-extra`
+- `spec`
 
 # Install Packages
 
@@ -45,6 +46,14 @@ $ npm run web:ios
 ```bash
 $ npm run web:chrome
 ```
+
+## Run Tests on Android for Native App
+
+```bash
+$ npm run android
+```
+
+> Real device should be connected OR emulator should be up and running.
 
 # Generate and Open Allure Report
 

@@ -16,7 +16,7 @@ exports.config = {
         'selenium-standalone'
     ],
     framework: 'mocha',
-    reporters: [['allure', {outputDir: 'allure-results'}]],
+    reporters: ['spec', ['allure', {outputDir: 'allure-results'}]],
     mochaOpts: {
         ui: 'tdd',
         compilers: ['js:@babel/register'],
@@ -53,8 +53,10 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     before: function (capabilities, specs) {
-        browser.setTimeout({ 'script': 60000 });
-        browser.setTimeout({ 'pageLoad': 60000 });
+        if (!browser.isMobile) {
+            browser.setTimeout({ 'script': 60000 });
+            browser.setTimeout({ 'pageLoad': 60000 });
+        }
         browser.setTimeout({ 'implicit': 60000 });
     },
     /**
@@ -95,8 +97,6 @@ exports.config = {
             browser.takeScreenshot();
         }
     },
-
-
     /**
      * Hook that gets executed after the suite has ended
      * @param {Object} suite suite details

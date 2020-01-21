@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { loginPage } from '../../../pages/login'
+import { loginPage } from '../../../pages/web/login'
 
 function getRegion(selector) {
   const element = $(selector);

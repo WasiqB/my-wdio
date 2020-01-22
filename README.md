@@ -55,6 +55,12 @@ $ npm run android
 
 > Real device should be connected OR emulator should be up and running.
 
+## Run Tests on iOS for Native App
+
+```bash
+$ npm run ios
+```
+
 # Generate and Open Allure Report
 
 ```bash

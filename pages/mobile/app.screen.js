@@ -3,19 +3,19 @@ import { expect } from 'chai';
 
 const SELECTORS = {
   HOME: {
-    android: '~Home'
+    all: '~Home'
   },
   WEB_VIEW: {
-    android: '~WebView'
+    all: '~WebView'
   },
   LOGIN: {
-    android: '~Login'
+    all: '~Login'
   },
   FORMS: {
-    android: '~Forms'
+    all: '~Forms'
   },
   SWIPE: {
-    android: '~Swipe'
+    all: '~Swipe'
   }
 }
 

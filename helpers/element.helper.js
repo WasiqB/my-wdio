@@ -4,7 +4,7 @@ class ElementHelper {
     if (typeof selector === 'string') {
       element = browser.$(selector);
     } 
-    element = browser.$(driver.isAndroid ? selector.android : selector.ios);
+    element = browser.$(selector.all || (driver.isAndroid ? selector.android : selector.ios));
     return element;
   }
 }

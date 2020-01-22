@@ -3,16 +3,16 @@ import ElementHelper from '../../helpers/element.helper';
 
 const SELECTTORS = {
   LOGIN_SCREEN: {
-    android: '~Login-screen'
+    all: '~Login-screen'
   },
   EMAIL: {
-    android: '~input-email'
+    all: '~input-email'
   },
   PASSWORD: {
-    android: '~input-password'
+    all: '~input-password'
   },
   LOGIN_BUTTON: {
-    android: '~button-LOGIN'
+    all: '~button-LOGIN'
   }
 };
 

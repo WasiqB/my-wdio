@@ -1,6 +1,8 @@
 const { config } = require('./wdio.web.visual.conf');
 
 config.port = 4723;
+config.services.shift();  // Remove chromedriver
+config.services.shift();  // Remove Selenium Standalone
 config.services.push('appium');
 config.appium = {
   // For options see

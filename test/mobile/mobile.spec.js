@@ -9,7 +9,8 @@ suite('Visual regression tests on the Login page.', () => {
   });
 
   test('Does Login.', () => {
-    loginScreen.compareScreen()
+    loginScreen.waitForLoad()
+      .compareScreen()
       .doLogin('test@webdriver.io', 'Test1234!');
   });
 });

@@ -2,7 +2,7 @@ import AppScreen from './app.screen';
 
 const SELECTORS = {
   HOME_SCREEN: {
-    android: '~Home-screen'
+    all: '~Home-screen'
   }
 };
 

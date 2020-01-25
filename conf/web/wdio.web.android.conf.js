@@ -22,9 +22,9 @@ config.capabilities = [
     platformName: 'Android',
     platformVersion: '8.1',
     deviceName: 'emulator-5554',
-    waitforTimeout: 30 * 60000,
-    commandTimeout: 30 * 60000,
-    newCommandTimeout: 30 * 60000,
+    waitforTimeout: 30000,
+    commandTimeout: 30000,
+    newCommandTimeout: 30000,
     nativeWebScreenshot: true,
   },
 ];

@@ -54,10 +54,10 @@ exports.config = {
      */
     before: function (capabilities, specs) {
         if (!browser.isMobile) {
-            browser.setTimeout({ 'script': 60000 });
-            browser.setTimeout({ 'pageLoad': 60000 });
+            browser.setTimeout({ 'script': 30000 });
+            browser.setTimeout({ 'pageLoad': 30000 });
         }
-        browser.setTimeout({ 'implicit': 60000 });
+        browser.setTimeout({ 'implicit': 30000 });
     },
     /**
      * Runs before a WebdriverIO command gets executed.

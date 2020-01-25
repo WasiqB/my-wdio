@@ -4,8 +4,8 @@ const { config } = require('../wdio.conf');
 const host = '127.0.0.1';   // default appium host
 const port = 4723;          // default appium port
 
-const waitforTimeout = 30 * 60000;
-const commandTimeout = 30 * 60000;
+const waitforTimeout = 30000;
+const commandTimeout = 30000;
 
 config.specs = ['./test/mobile/*.spec.js'];
 

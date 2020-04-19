@@ -18,7 +18,7 @@ config.capabilities = [
   {
     browserName: 'safari',
     platformName: 'iOS',
-    platformVersion: '13.3',
+    platformVersion: '13.4',
     deviceName: 'iPhone 8 Plus',
   },
 ];

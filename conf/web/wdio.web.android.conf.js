@@ -17,13 +17,13 @@ config.appium = {
 };
 config.capabilities = [
   {
-    appiumVersion: '1.16.0',
     browserName: 'chrome',
     platformName: 'Android',
     platformVersion: '8.1',
     deviceName: 'emulator-5554',
+    automationName: 'UiAutomator2',
+    // avd: 'Pixel_3_XL_API_27',
     waitforTimeout: 30000,
-    commandTimeout: 30000,
     newCommandTimeout: 30000,
     nativeWebScreenshot: true,
   },

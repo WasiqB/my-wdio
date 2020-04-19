@@ -38,7 +38,7 @@ config.capabilities = [
     maxInstances: 1,
     platformName: 'iOS',
     deviceName: 'iPhone 8 Plus',
-    'appium:platformVersion': '13.3',
+    'appium:platformVersion': '13.4',
     'appium:deviceName': 'iPhone 8 Plus',
     'appium:automationName': 'XCUITest',
     'appium:app': join(process.cwd(), './apps/app-0.2.1.app.zip'),

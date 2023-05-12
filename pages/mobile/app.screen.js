@@ -1,23 +1,23 @@
-import ElementHelper from '../../helpers/element.helper';
-import { expect } from 'chai';
+import ElementHelper from "../../helpers/element.helper";
+import { expect } from "chai";
 
 const SELECTORS = {
   HOME: {
-    all: '~Home'
+    all: "~Home",
   },
   WEB_VIEW: {
-    all: '~WebView'
+    all: "~WebView",
   },
   LOGIN: {
-    all: '~Login'
+    all: "~Login",
   },
   FORMS: {
-    all: '~Forms'
+    all: "~Forms",
   },
   SWIPE: {
-    all: '~Swipe'
-  }
-}
+    all: "~Swipe",
+  },
+};
 
 export default class AppScreen {
   constructor(selector) {
@@ -30,28 +30,28 @@ export default class AppScreen {
     return this;
   }
 
-  openHome() {
-    return ElementHelper.$(SELECTORS.HOME).click();
+  async openHome() {
+    return await ElementHelper.$(SELECTORS.HOME).click();
   }
 
-  openWebView() {
-    return ElementHelper.$(SELECTORS.WEB_VIEW).click();
+  async openWebView() {
+    return await ElementHelper.$(SELECTORS.WEB_VIEW).click();
   }
 
-  openLogin() {
-    return ElementHelper.$(SELECTORS.LOGIN).click();
+  async openLogin() {
+    return await ElementHelper.$(SELECTORS.LOGIN).click();
   }
 
-  openForms() {
-    return ElementHelper.$(SELECTORS.FORMS).click();
+  async openForms() {
+    return await ElementHelper.$(SELECTORS.FORMS).click();
   }
 
-  openSwipe() {
-    return ElementHelper.$(SELECTORS.SWIPE).click(); 
+  async openSwipe() {
+    return await ElementHelper.$(SELECTORS.SWIPE).click();
   }
 
-  waitForLoad(isVisible = true) {
-    ElementHelper.$(this.selector).waitForDisplayed(10000, !isVisible);
+  async waitForLoad(isVisible = true) {
+    await ElementHelper.$(this.selector).waitForDisplayed(10000, !isVisible);
     return this;
   }
 }

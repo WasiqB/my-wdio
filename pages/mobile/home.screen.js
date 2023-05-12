@@ -1,9 +1,9 @@
-import AppScreen from './app.screen';
+import AppScreen from "./app.screen";
 
 const SELECTORS = {
   HOME_SCREEN: {
-    all: '~Home-screen'
-  }
+    all: "~Home-screen",
+  },
 };
 
 class HomeScreen extends AppScreen {

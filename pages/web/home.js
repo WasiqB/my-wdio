@@ -2,11 +2,11 @@ import Page from "./page";
 
 class HomePage extends Page {
   get logoSite() {
-    return $('img.logo.img-responsive');
+    return $("img.logo.img-responsive");
   }
 
   get cart() {
-    return $('.shopping_cart > a');
+    return $(".shopping_cart > a");
   }
 }
 

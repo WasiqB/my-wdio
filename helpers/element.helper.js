@@ -1,10 +1,12 @@
 class ElementHelper {
-  static $(selector) {
-    var element = undefined;
-    if (typeof selector === 'string') {
-      element = browser.$(selector);
-    } 
-    element = browser.$(selector.all || (driver.isAndroid ? selector.android : selector.ios));
+  static async $(selector) {
+    let element = undefined;
+    if (typeof selector === "string") {
+      element = await browser.$(selector);
+    }
+    element = await browser.$(
+      selector.all || (driver.isAndroid ? selector.android : selector.ios)
+    );
     return element;
   }
 }

@@ -1,51 +1,57 @@
-const { join } = require('path');
-const { config } = require('../wdio.conf');
+import mainConfig from "../wdio.conf.js";
 
-const host = '127.0.0.1';   // default appium host
-const port = 4723;          // default appium port
+const host = "127.0.0.1"; // default appium host
+const port = 4723; // default appium port
 
 const waitforTimeout = 30000;
 const commandTimeout = 30000;
 
-config.specs = ['./test/mobile/*.spec.js'];
-
-config.port = port;
-config.services = ['appium', 'native-app-compare'];
-config.appium = {
-  logPath: './logs/appium',
-  waitStartTime: 6000,
-  waitforTimeout: waitforTimeout,
-  args: {
-    address: host,
-    port: port,
-    commandTimeout: commandTimeout,
-    sessionOverride: true,
-    debugLogSpacing: true
+console.log(mainConfig.config);
+export const config = {
+  ...mainConfig.config,
+  specs: ["../../test/mobile/*.spec.js"],
+  port,
+  services: [
+    [
+      "appium",
+      {
+        logPath: "./logs/appium",
+        waitStartTime: 6000,
+        waitforTimeout: waitforTimeout,
+        args: {
+          address: host,
+          port: port,
+          commandTimeout: commandTimeout,
+          sessionOverride: true,
+          debugLogSpacing: true,
+        },
+        command: "appium",
+      },
+    ],
+    "native-app-compare",
+  ],
+  nativeAppCompare: {
+    baselineFolder: join(process.cwd(), "./snapshots/baselines"),
+    screenshotPath: join(process.cwd(), "snapshots/"),
+    autoSaveBaseline: true,
+    blockOutStatusBar: true,
+    blockOutIphoneXBottomBar: true,
+    blockOutNavigationBar: true,
+    imageNameFormat: "{tag}-{platformName}-{deviceName}",
   },
-  command : 'appium'
+  capabilities: [
+    {
+      maxInstances: 1,
+      platformName: "Android",
+      deviceName: "Pixel 6 Pro",
+      "appium:platformVersion": "12",
+      "appium:deviceName": "Pixel 6 Pro",
+      "appium:automationName": "UiAutomator2",
+      "appium:avd": "Pixel_6_Pro",
+      "appium:app": join(process.cwd(), "/apps/app-0.2.1.apk"),
+      waitforTimeout: waitforTimeout,
+      "appium:commandTimeout": commandTimeout,
+      "appium:newCommandTimeout": commandTimeout,
+    },
+  ],
 };
-config.nativeAppCompare = {
-  baselineFolder: join(process.cwd(), './snapshots/baselines'),
-  screenshotPath: join(process.cwd(), 'snapshots/'),
-  autoSaveBaseline: true,
-  blockOutStatusBar: true,
-  blockOutIphoneXBottomBar: true,
-  blockOutNavigationBar: true,
-  imageNameFormat: '{tag}-{platformName}-{deviceName}'
-};
-config.capabilities = [
-  {
-    maxInstances: 1,
-    platformName: 'Android',
-    deviceName: 'Nexus 5',
-    'appium:platformVersion': '8.1',
-    'appium:deviceName': 'emulator-5554',
-    'appium:automationName': 'UiAutomator2',
-    'appium:app': join(process.cwd(), './apps/app-0.2.1.apk'),
-    waitforTimeout: waitforTimeout,
-    'appium:commandTimeout': commandTimeout,
-    'appium:newCommandTimeout': commandTimeout
-  }
-];
-
-exports.config = config;

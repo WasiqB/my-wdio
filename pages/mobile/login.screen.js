@@ -1,19 +1,19 @@
-import AppScreen from './app.screen';
-import ElementHelper from '../../helpers/element.helper';
+import AppScreen from "./app.screen";
+import ElementHelper from "../../helpers/element.helper";
 
 const SELECTTORS = {
   LOGIN_SCREEN: {
-    all: '~Login-screen'
+    all: "~Login-screen",
   },
   EMAIL: {
-    all: '~input-email'
+    all: "~input-email",
   },
   PASSWORD: {
-    all: '~input-password'
+    all: "~input-password",
   },
   LOGIN_BUTTON: {
-    all: '~button-LOGIN'
-  }
+    all: "~button-LOGIN",
+  },
 };
 
 class LoginScreen extends AppScreen {
@@ -33,13 +33,13 @@ class LoginScreen extends AppScreen {
     return ElementHelper.$(SELECTTORS.LOGIN_BUTTON);
   }
 
-  doLogin(userId, userPass) {
-    this.email.setValue(userId);
-    this.password.setValue(userPass);
-    if (driver.isKeyboardShown()) {
-      driver.hideKeyboard();
+  async doLogin(userId, userPass) {
+    await this.email.setValue(userId);
+    await this.password.setValue(userPass);
+    if (await driver.isKeyboardShown()) {
+      await driver.hideKeyboard();
     }
-    this.loginButton.click();
+    await this.loginButton.click();
   }
 }
 export default new LoginScreen();

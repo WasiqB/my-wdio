@@ -2,27 +2,27 @@ import Page from "./page";
 
 class LoginPage extends Page {
   get buttonLogin() {
-    return $('.login');
+    return $(".login");
   }
 
   get inputEmail() {
-    return $('body #email');
+    return $("body #email");
   }
 
   get inputPassword() {
-    return $('body #passwd');
+    return $("body #passwd");
   }
 
   get buttonSignIn() {
-    return $('body #SubmitLogin');
+    return $("body #SubmitLogin");
   }
 
   get userLoggedIn() {
-    return $('.account');
+    return $(".account");
   }
 
   get welcomeMessage() {
-    return $('.info-account');
+    return $(".info-account");
   }
 
   login(user) {

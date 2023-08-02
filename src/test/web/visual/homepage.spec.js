@@ -1,4 +1,3 @@
-import { expect } from "chai";
 import { loginPage } from "../../../pages/web/login";
 
 async function getRegion(selector) {

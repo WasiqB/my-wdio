@@ -1,5 +1,4 @@
 import ElementHelper from "../../helpers/element.helper";
-import { expect } from "chai";
 
 const SELECTORS = {
   HOME: {

@@ -1,11 +1,11 @@
 export const config = {
   runner: "local",
-  path: "/wd/hub",
   maxInstances: 1,
   capabilities: [
     {
       maxInstances: 5,
       browserName: "chrome",
+      browserVersion: "stable",
     },
   ],
   logLevel: "info",
@@ -13,7 +13,7 @@ export const config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
-  services: ["chromedriver", "selenium-standalone"],
+  services: [],
   framework: "mocha",
   reporters: ["spec", ["allure", { outputDir: "allure-results" }]],
   mochaOpts: {

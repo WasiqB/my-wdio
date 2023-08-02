@@ -1,5 +1,3 @@
-import { expect } from "chai";
-
 suite("webdriver.io page", () => {
   test("should have the right title", async () => {
     await browser.url("/");
